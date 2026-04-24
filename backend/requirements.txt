@@ -1,0 +1,38 @@
+# EvidenceChain - Backend Dependencies
+# Pinned to exact versions per project specification
+
+# Django & REST Framework
+Django==4.2
+djangorestframework==3.14.0
+djangorestframework-simplejwt==5.3.0
+django-cors-headers==4.3.1
+
+# Database
+psycopg2-binary==2.9.9
+dj-database-url==2.1.0
+
+# Async Task Queue
+celery==5.3.4
+redis==5.0.1
+
+# AI / LLM
+openai==1.3.0
+sentence-transformers==2.2.2
+chromadb==0.4.18
+
+# Document Processing
+python-magic==0.4.27
+pytesseract==0.3.10
+Pillow==10.1.0
+pdfplumber==0.10.3
+pdf2image==1.16.3
+
+# AWS
+boto3==1.34.0
+
+# PDF Generation
+reportlab==4.0.7
+
+# Utilities
+python-dotenv==1.0.0
+gunicorn==21.2.0
