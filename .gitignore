@@ -1,9 +1,39 @@
+# ==== Python ====
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
 .venv/
 venv/
 env/
-__pycache__/
-*.pyc
-.env
+
+# ==== Django ====
+*.sqlite3
 db.sqlite3
+*.log
+media/
+generated_packets/
+
+# ==== ChromaDB ====
+chroma_data/
+chroma_db/
+
+# ==== Environment ====
+.env
+.env.local
+
+# ==== Node / Frontend ====
 node_modules/
+dist/
+.vite/
+
+# ==== OS ====
 .DS_Store
+Thumbs.db
+desktop.ini
+
+# ==== IDE ====
+.vscode/
+.idea/
+*.swp
+*.swo
