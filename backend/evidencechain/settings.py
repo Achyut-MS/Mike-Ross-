@@ -104,12 +104,23 @@ TEMPLATES = [
 # DATABASE - PostgreSQL 15
 # ==============================================================================
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default='postgresql://evidencechain_user:dev_password_change_in_prod@localhost:5432/evidencechain',
-        conn_max_age=600,
-    )
-}
+_database_url = os.getenv('DATABASE_URL', '')
+
+if _database_url:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=_database_url,
+            conn_max_age=600,
+        )
+    }
+else:
+    # SQLite fallback for local development without PostgreSQL
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # ==============================================================================
