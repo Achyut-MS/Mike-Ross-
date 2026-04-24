@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import {
-  getCase, getTimeline, getGapReport, getEvidenceTemplate,
-  generateCasePacket, getCasePacket,
+  getCase, getTimeline, getGapReport,
+  generateCasePacket,
 } from '../services/api';
 import EvidenceGuidedInterview from '../components/EvidenceGuidedInterview';
 
@@ -19,7 +19,6 @@ export default function CaseDetail() {
   const [caseData, setCaseData] = useState<any>(null);
   const [timeline, setTimeline] = useState<any>(null);
   const [gapReport, setGapReport] = useState<any>(null);
-  const [packet, setPacket] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [generating, setGenerating] = useState(false);
 
@@ -287,7 +286,6 @@ function TimelineTab({ timeline }: { timeline: any }) {
 
 /* ---- Case Packet Tab ---- */
 function PacketTab({
-  caseData,
   onGenerate,
   generating,
 }: {

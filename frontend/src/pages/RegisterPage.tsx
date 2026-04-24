@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { register, setTokens } from '../services/api';
 
 export default function RegisterPage() {
-  const navigate = useNavigate();
   const [form, setForm] = useState({
     username: '',
     password: '',
